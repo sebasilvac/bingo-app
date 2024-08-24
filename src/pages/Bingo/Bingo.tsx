@@ -18,6 +18,7 @@ export const Bingo = ({time}: BingoProps ) => {
     lastLetter,
     lastNumber,
     refreshBingo,
+    reset,
   } = useBingo();
 
   useEffect (() => {
@@ -25,6 +26,7 @@ export const Bingo = ({time}: BingoProps ) => {
   }, [time]);
 
   return (
+    <>
     <div className="flex flex-row w-full">
       <div id="tablero" className="w-11/12">
         {bingoLetters.map((letter) => {
@@ -64,6 +66,9 @@ export const Bingo = ({time}: BingoProps ) => {
           principal
         />
       </div>
+
     </div>
+    <button onClick={reset}>Reiniciar</button>
+    </>
   );
 };

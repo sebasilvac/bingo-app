@@ -19,11 +19,17 @@ const router = createBrowserRouter([
     element: <IntervalRender
       Component={Bingo}
     />,
+    children: [
+      {
+        path: "tablero",
+        element: <Tablero />,
+      },
+    ],
   },
-  {
-    path: "/tablero",
-    element: <Tablero />,
-  },
+  // {
+  //   path: "tablero",
+  //   element: <Tablero />,
+  // },
 ]);
 
 createRoot(document.getElementById('root')!).render(
