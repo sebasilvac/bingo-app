@@ -26,7 +26,12 @@ export const Item = ({
     <button
       className={`btn item ${getColor(selected)} h-10`}
       onClick={() => {
-        if (setSelectedNumber) {
+        //toggle
+        if (selectedNumber.includes(number)) {
+          const newList = selectedNumber.filter((num) => num !== number);
+
+          setSelectedNumber(newList);
+        } else if (setSelectedNumber) {
           const newList = [...selectedNumber, number];
 
           setSelectedNumber(newList);
