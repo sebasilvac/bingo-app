@@ -1,0 +1,8 @@
+.item {
+  @apply w-28 font-bold text-center text-white text-3xl;
+  padding: 0;
+  border-radius: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
